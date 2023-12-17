@@ -1,10 +1,10 @@
 [package]
-name = "btparse"
-version = "0.1.2-alpha.0"
-authors = ["Jane Lusby <jlusby@yaah.dev>"]
+name = "btparse-stable"
+version = "0.1.2"
+authors = ["Jane Lusby <jlusby@yaah.dev>", "Dotan Nahum <dotan@rng0.io>"]
 edition = "2018"
-repository = "https://github.com/yaahc/btparse"
-homepage = "https://github.com/yaahc/btparse"
+repository = "https://github.com/jondot/btparse"
+homepage = "https://github.com/jondot/btparse"
 documentation = "https://docs.rs/btparse"
 description = """
 A minimal deserializer for inspecting `std::backtrace::Backtrace`'s Debug format.
@@ -23,7 +23,7 @@ eyre = "0.3.8"
 [[package.metadata.release.pre-release-replacements]]
 file = "CHANGELOG.md"
 search = "Unreleased"
-replace="{{version}}"
+replace = "{{version}}"
 
 [[package.metadata.release.pre-release-replacements]]
 file = "src/lib.rs"
@@ -34,22 +34,22 @@ exactly = 1
 [[package.metadata.release.pre-release-replacements]]
 file = "CHANGELOG.md"
 search = "\\.\\.\\.HEAD"
-replace="...{{tag_name}}"
+replace = "...{{tag_name}}"
 exactly = 1
 
 [[package.metadata.release.pre-release-replacements]]
 file = "CHANGELOG.md"
 search = "ReleaseDate"
-replace="{{date}}"
+replace = "{{date}}"
 
 [[package.metadata.release.pre-release-replacements]]
-file="CHANGELOG.md"
-search="<!-- next-header -->"
-replace="<!-- next-header -->\n\n## [Unreleased] - ReleaseDate"
-exactly=1
+file = "CHANGELOG.md"
+search = "<!-- next-header -->"
+replace = "<!-- next-header -->\n\n## [Unreleased] - ReleaseDate"
+exactly = 1
 
 [[package.metadata.release.pre-release-replacements]]
-file="CHANGELOG.md"
-search="<!-- next-url -->"
-replace="<!-- next-url -->\n[Unreleased]: https://github.com/yaahc/{{crate_name}}/compare/{{tag_name}}...HEAD"
-exactly=1
+file = "CHANGELOG.md"
+search = "<!-- next-url -->"
+replace = "<!-- next-url -->\n[Unreleased]: https://github.com/yaahc/{{crate_name}}/compare/{{tag_name}}...HEAD"
+exactly = 1
